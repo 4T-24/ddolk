@@ -111,7 +111,6 @@ export const makeDeploymentFactory =
       name,
       labels: {
         [LABEL_POD]: name,
-        [ANNOTATION_NS]: 'auto:size=65536',
         ...commonLabels,
       },
       annotations: {
