@@ -3,6 +3,7 @@ import crypto from 'crypto'
 import config from '../config.js'
 import {
   ANNOTATION_TTL,
+  ANNOTATION_NS,
   LABEL_CHALLENGE,
   LABEL_EGRESS,
   LABEL_INSTANCE,
@@ -29,7 +30,7 @@ export const makeNamespaceManifest = ({ name, labels, timeout }) => ({
   metadata: {
     name,
     labels,
-    annotations: { [ANNOTATION_TTL]: timeout.toString() },
+    annotations: { [ANNOTATION_TTL]: timeout.toString(), [ANNOTATION_NS]: 'auto:size=65536' },
   },
 })
 
@@ -112,6 +113,9 @@ export const makeDeploymentFactory =
         [LABEL_POD]: name,
         ...commonLabels,
       },
+      annotations: {
+        [ANNOTATION_NS]: 'auto:size=65536',
+      },
     },
     spec: {
       replicas: 1,
@@ -127,6 +131,9 @@ export const makeDeploymentFactory =
             [LABEL_POD]: name,
             [LABEL_EGRESS]: (egress ?? false).toString(),
             ...commonLabels,
+          },
+          annotations: {
+            [ANNOTATION_NS]: 'auto:size=65536',
           },
         },
         spec,
