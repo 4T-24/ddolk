@@ -1,20 +1,18 @@
 import fp from 'fastify-plugin'
-import jwt from '@fastify/jwt'
-
 import config from '../config.js'
 
 const auth = fp(async(fastify, _options) => {
-    fastify.register(jwt, {
-        secret: config.secretKey,
-    })
-
     fastify.decorate('authenticate', async(req, res) => {
-        // try {
-        //   await req.jwtVerify()
-        //   req.log.info({ user: req.user.sub }, 'user authenticated')
-        // } catch (err) {
-        //   res.unauthorized('Invalid authorization token')
-        // }
+        // Read Bearer token from Authorization header
+        const token = req.headers.authorization?.replace('Bearer ', '')
+        // Verify token against secret key
+        if (token === undefined || token === null) {
+            res.unauthorized('Missing token')
+        }
+        let secret_key = config.secretKey
+        if (token !== secret_key) {
+            res.unauthorized('Invalid token')
+        }
     })
 })
 
