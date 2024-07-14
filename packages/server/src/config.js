@@ -33,7 +33,7 @@ const findConfig = () => {
   return null
 }
 
-const configPath = process.env.KLODD_CONFIG ?? findConfig()
+const configPath = process.env.ddolk_CONFIG ?? findConfig()
 let files = []
 if (configPath) {
   files = fs

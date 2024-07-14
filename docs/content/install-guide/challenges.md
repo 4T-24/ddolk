@@ -1,9 +1,9 @@
 # Challenges
 
-Refer to the [examples](../examples/challenges.md) and [CRD schema](https://raw.githubusercontent.com/TJCSec/klodd/master/manifests/klodd-crd.yaml) for more information.
+Refer to the [examples](../examples/challenges.md) and [CRD schema](https://raw.githubusercontent.com/TJCSec/ddolk/master/manifests/ddolk-crd.yaml) for more information.
 
 ```yaml
-apiVersion: "klodd.tjcsec.club/v1"
+apiVersion: "ddolk.4ts.fr/v1"
 kind: Challenge
 metadata:
   name: test # (1)

@@ -1,6 +1,6 @@
-site_name: Klodd
-site_url: https://klodd.tjcsec.club/
-repo_url: https://github.com/TJCSec/klodd/
+site_name: ddolk
+site_url: https://ddolk.4ts.fr/
+repo_url: https://github.com/TJCSec/ddolk/
 edit_uri: blob/master/docs/content/
 site_description: CTF challenge per-team instance runner
 site_author: TJCSC
@@ -40,7 +40,7 @@ theme:
 
 nav:
 - "Home": index.md
-- "How To Use Klodd": how-to.md
+- "How To Use ddolk": how-to.md
 - "Installation Guide":
   - "Prerequisites": install-guide/prerequisites.md
   - "Installation": install-guide/installation.md

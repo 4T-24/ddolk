@@ -21,8 +21,8 @@ const routes = async (fastify, _options) => {
       if (team === null) {
         return res.unauthorized('Invalid rCTF token.')
       }
-      const kloddToken = fastify.jwt.sign({ sub: team.id })
-      return { token: kloddToken }
+      const ddolkToken = fastify.jwt.sign({ sub: team.id })
+      return { token: ddolkToken }
     },
   })
 }

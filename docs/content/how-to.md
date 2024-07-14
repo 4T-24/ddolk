@@ -1,6 +1,6 @@
-# How To Use Klodd
+# How To Use ddolk
 
-This is a guide for how to start, access, and stop challenges deployed using Klodd.
+This is a guide for how to start, access, and stop challenges deployed using ddolk.
 
 ## Starting an Instance
 
@@ -27,7 +27,7 @@ If the challenge is accessible through a website, then no special action is need
 If the challenge is accessible through a network socket, then you must connect, **using SNI**, to the host and port provided.
 
 !!! warning "No netcat!"
-    OpenBSD netcat (the `nc` command you probably have installed) does not support SNI, so you can **not** use a regular `nc` command to connect to TCP challenges deployed using Klodd.
+    OpenBSD netcat (the `nc` command you probably have installed) does not support SNI, so you can **not** use a regular `nc` command to connect to TCP challenges deployed using ddolk.
 
 ![Screenshot showing the babyheapng challenge in a Running state](./img/babyheapng-running-light.png#only-light)
 ![Screenshot showing the babyheapng challenge in a Running state](./img/babyheapng-running-dark.png#only-dark)
@@ -48,7 +48,7 @@ Each of the four connection methods is explained in more detail below.
 ??? example "Connecting with socat"
     [socat](http://www.dest-unreach.org/socat/) only supports SNI in version 1.7.4.0 or later. Depending on your system, the version of socat installed may be too old. If this is the case, you can download and compile socat from source (this should only take a few minutes) or try a different connection method.
 
-    The command copied from Klodd connects `STDIO` (`-` is shorthand) to the server. You can replace `-` with any address that socat supports; click "Proxy" below for an example.
+    The command copied from ddolk connects `STDIO` (`-` is shorthand) to the server. You can replace `-` with any address that socat supports; click "Proxy" below for an example.
     === "Direct"
         ```
         socat - openssl:babyheapng-e20d62127bb9434b.tjc.tf:1337

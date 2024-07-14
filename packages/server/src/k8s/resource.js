@@ -39,7 +39,7 @@ const stopAll = async (challengeId) => {
 const subscribeToCluster = async () => {
   const challengeList = (
     await customApi.listClusterCustomObject(
-      'klodd.tjcsec.club',
+      'ddolk.4ts.fr',
       'v1',
       'challenges'
     )
@@ -53,7 +53,7 @@ const subscribeToCluster = async () => {
   )
 
   return watch.watch(
-    '/apis/klodd.tjcsec.club/v1/challenges',
+    '/apis/ddolk.4ts.fr/v1/challenges',
     {
       resourceVersion: challengeList.metadata.resourceVersion,
     },

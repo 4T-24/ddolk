@@ -17,7 +17,7 @@ export const getId = () => crypto.randomBytes(8).toString('hex')
 export const getHost = (challengeId, instanceId) =>
   `${challengeId}-${instanceId}.${config.challengeDomain}`
 export const getNamespaceName = (challengeId, teamId) =>
-  `klodd-${challengeId}-${teamId}`
+  `ddolk-${challengeId}-${teamId}`
 
 export const makeCommonLabels = ({ challengeId, teamId, instanceId }) => ({
   [LABEL_CHALLENGE]: challengeId,

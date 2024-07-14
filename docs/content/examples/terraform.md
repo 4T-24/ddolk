@@ -3,9 +3,9 @@
 This example uses [Terraform](https://www.terraform.io/) to configure the [Fruit Store](./challenges.md#fruit-store) challenge.
 
 ```tf
-resource "kubernetes_manifest" "klodd_fruit_store" {
+resource "kubernetes_manifest" "ddolk_fruit_store" {
   manifest = {
-    apiVersion = "klodd.tjcsec.club/v1"
+    apiVersion = "ddolk.4ts.fr/v1"
     kind       = "Challenge"
     metadata = {
       name      = "fruit-store"

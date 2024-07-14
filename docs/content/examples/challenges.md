@@ -7,7 +7,7 @@ This page includes several examples of challenges.
 This "challenge" simply deploys `traefik/whoami`.
 
 ```yaml
-apiVersion: "klodd.tjcsec.club/v1"
+apiVersion: "ddolk.4ts.fr/v1"
 kind: Challenge
 metadata:
   name: test
@@ -47,7 +47,7 @@ spec:
 This is `fruit-store` from TJCTF 2022. The source (including Dockerfile) can be found [here](https://github.com/TJCSec/tjctf-2022-challenges/tree/master/web/fruit-store).
 
 ```yaml
-apiVersion: "klodd.tjcsec.club/v1"
+apiVersion: "ddolk.4ts.fr/v1"
 kind: Challenge
 metadata:
   name: fruit-store
@@ -83,7 +83,7 @@ This is `analects` from TJCTF 2022. The source (including Dockerfile) can be fou
 This challenge uses multiple pods, and also includes a startup probe. The `mysql` pod can take several minutes to fully initialize, and the startup probe for `app` will fail during this time, causing it to be unavailable. When the exposed pod is in an unavailable state, the status of the instance remains as "Starting" and the service is unavailable.
 
 ```yaml
-apiVersion: "klodd.tjcsec.club/v1"
+apiVersion: "ddolk.4ts.fr/v1"
 kind: Challenge
 metadata:
   name: analects
@@ -141,7 +141,7 @@ This is `babyheapng` from TJCTF 2022. The source (including Dockerfile) can be f
 Note the use of `securityContext.privileged`. This is because this challenge uses [`redpwn/jail`](https://github.com/redpwn/jail).
 
 ```yaml
-apiVersion: "klodd.tjcsec.club/v1"
+apiVersion: "ddolk.4ts.fr/v1"
 kind: Challenge
 metadata:
   name: babyheapng

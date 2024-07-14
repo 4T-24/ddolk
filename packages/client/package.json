@@ -1,5 +1,5 @@
 {
-  "name": "@klodd/client",
+  "name": "@ddolk/client",
   "version": "0.1.0",
   "dependencies": {
     "@fontsource/inter": "^4.5.11",

@@ -1,6 +1,6 @@
 /* eslint-disable max-classes-per-file */
 
-export class KloddError extends Error {
+export class ddolkError extends Error {
   constructor(message, cause) {
     super(message)
     this.name = this.constructor.name
@@ -8,6 +8,6 @@ export class KloddError extends Error {
   }
 }
 
-export class InstanceExistsError extends KloddError {}
+export class InstanceExistsError extends ddolkError {}
 
-export class InstanceCreationError extends KloddError {}
+export class InstanceCreationError extends ddolkError {}
